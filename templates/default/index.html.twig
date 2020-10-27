@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md">
+                <h2>DEMO REEL 2020</h2>
+                <p>
+                    Le <strong>CGBros</strong> présente "Marshmallow" -
+                </p>
+                <cite>
+                    "Un père emmène son fils chasser dans la forêt. Cependant, le
+                    garçon est plus intéressé par la consommation de ses guimauves que par le passe-temps de son père.
+                    Sur la route, un ours est attiré par les bonbons et cela va donner lieu à une rencontre impromptue."
+                </cite>
+            </div>
+            <div class="col-md">
+                {{ youtubeIframe('T9H5dz9Pb0U') }}
+            </div>
+        </div>
+    </div>
+
+    <div class="row row-cols-md-3">
+        <div class="col-md">
+            <h2>DEMO REEL 2019</h2>
+            {{ vimeoIframe('314778134') }}
+        </div>
+        <div class="col-md">
+            <h2>DEMO REEL 2018</h2>
+            {{ youtubeIframe('FyyAdbKGKe0') }}
+        </div>
+        <div class="col-md">
+            <h2>DEMO REEL 2017</h2>
+            {{ vimeoIframe('233782922') }}
+        </div>
+    </div>
+{% endblock %}

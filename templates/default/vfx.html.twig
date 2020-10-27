@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    VFX - {{ parent() }}
+{% endblock %}
+{% block body %}
+    <h1>VFX</h1>
+
+    <div class="row row-cols-md-3">
+        {% for video in videos %}
+            <div class="col">
+                <div class="video">
+                    <h2>{{ video.name }}</h2>
+                    {% if video.type == 'youtube' %}
+                        {{ youtubeIframe(video.code) }}
+                    {% else %}
+                        {{ vimeoIframe(video.code) }}
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
